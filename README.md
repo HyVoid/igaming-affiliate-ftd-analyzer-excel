@@ -11,7 +11,7 @@
 > - 🌐 **[Launch the Free Web-Based iGaming C/FTD & Traffic Analyzer](YOUR_BROWSER_DEMO_URL)** — Audit early vendor cohorts, test minimum FTD sample thresholds, and simulate media-buying budget rules directly in your browser without installing software or creating an account.
 > - 📥 **[Download the iGaming Affiliate & Media Buying Excel Workbook (.xlsx)](YOUR_EXCEL_DOWNLOAD_URL)** — Get the full spreadsheet template for offline bi-weekly budget reviews, multi-GEO benchmark calibration, and historical Day 30 ROI backtesting.
 >
-> *No signup. No installation. Free browser access. (Deployment Note: Replace the placeholder URLs above with verified live links for the web demo and Excel distribution before publishing.)*
+> *No signup. No installation. Free browser access. *
 
 ---
 
