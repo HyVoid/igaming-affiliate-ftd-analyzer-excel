@@ -1,111 +1,142 @@
-# iGaming Vendor Early Performance & Decision Analyzer
+# iGaming Affiliate & Media Buying Excel Template: Cost per FTD (C/FTD) & Cohort Traffic Analyzer
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Browser%20%7C%20Excel-217346.svg)
-![Category](https://img.shields.io/badge/Tool-Early%20Performance%20Decision%20Support-2251FF.svg)
+![Category](https://img.shields.io/badge/Tool-iGaming%20UA%20%26%20Affiliate%20BI-2251FF.svg)
 
-**Evaluate acquisition vendors earlier, separate genuine performance problems from operational risks, and make more consistent budget decisions using a transparent, rule-based framework. Free browser access requires no installation or signup; an Excel version supports offline analysis and repeatable operational reviews.**
+**An iGaming affiliate and media buying performance analyzer, Cost per First-Time Depositor (C/FTD / CPFTD) calculator, and early cohort decision Excel template. Built for casino and sportsbook user acquisition (UA) managers, affiliate directors, and performance marketers to evaluate D3/D4/D7 player cohorts, isolate ad account bans and bonus-abuse fraud, and automate `SCALE / KEEP / STOP / REVIEW` budget allocation—available as a free browser-based simulator (no signup required) and a downloadable Microsoft Excel workbook.**
 
-> **Choose how to work with the analyzer**
+> **Access the iGaming Traffic & C/FTD Decision Tools**
 >
-> - 🌐 **Browser version:** Open the web-based version to evaluate the workflow without installing software or creating an account.
-> - 📥 **Excel version:** Use the workbook for offline analysis, internal review records, and recurring budget decisions.
+> - 🌐 **[Launch the Free Web-Based iGaming C/FTD & Traffic Analyzer](YOUR_BROWSER_DEMO_URL)** — Audit early vendor cohorts, test minimum FTD sample thresholds, and simulate media-buying budget rules directly in your browser without installing software or creating an account.
+> - 📥 **[Download the iGaming Affiliate & Media Buying Excel Workbook (.xlsx)](YOUR_EXCEL_DOWNLOAD_URL)** — Get the full spreadsheet template for offline bi-weekly budget reviews, multi-GEO benchmark calibration, and historical Day 30 ROI backtesting.
 >
-> No signup. No installation. Free browser access.
->
-> **Access links:** The public browser-demo URL and Excel distribution or purchase URL must be added before publication. This repository's source specification does not provide verified URLs.
+> *No signup. No installation. Free browser access. (Deployment Note: Replace the placeholder URLs above with verified live links for the web demo and Excel distribution before publishing.)*
 
-## What It Helps You Track
+---
 
-- **Acquisition cost against market-specific targets** — identify vendors whose cost per first-time depositor (C/FTD) is materially better or worse than the applicable benchmark.
-- **Early funnel quality** — compare net active registrations, first deposits, repeat deposits, and retention instead of judging acquisition by registration volume alone.
-- **Evidence quality at Day 3, Day 4, and Day 7** — distinguish a promising early result from a conclusion based on too few first-time depositors.
-- **Account and traffic risks** — flag restricted or banned advertising accounts, suspected fraudulent traffic, and unusually weak repeat-deposit behavior before treating the numbers as ordinary performance.
-- **Recommended budget actions** — produce explainable `SCALE`, `KEEP`, `STOP`, or `REVIEW` recommendations, including the rule that triggered each result.
-- **Historical decision performance** — compare early decisions with mature Day 30 results to assess whether the current thresholds are identifying valuable traffic or cutting off promising vendors too early.
+## Core iGaming User Acquisition Metrics & Traffic Pain Points Solved
 
-## Quick Start Workflow
+Instead of judging traffic vendors by raw registration volume or noisy early CPA spikes, this rule-based framework connects early player funnel progression to statistical sample gates. Here is how the analyzer maps **iGaming media buying and affiliate pain points** to auditable **FTD and retention metrics**:
 
-The analyzer follows a simple operating cycle: configure the rules once, import existing performance data, review the resulting recommendations, and refresh the data on a regular schedule.
+| iGaming UA & Affiliate Pain Point | Rule-Based Evaluation & Gating Mechanism | Key Casino & Sportsbook KPIs Tracked |
+| :--- | :--- | :--- |
+| **Uncontrolled Cost per First-Time Depositor (C/FTD)** | Benchmarks vendor acquisition cost against GEO- and platform-specific target matrices across Tier-1 to Tier-3 markets. | Cost per FTD (`C/FTD` / `CPFTD`), target C/FTD variance (%), Cost per Registration (`CPR`) |
+| **Vanity Registration Volume & Weak Funnel Conversion** | Tracks player progression past initial sign-up to isolate traffic sources that fail to convert into repeat depositors. | Net active registrations, Reg-to-FTD conversion rate (%), repeat deposit ratio, early player retention |
+| **Premature Scaling or Killing on Small Cohorts** | Enforces minimum spend floors and Day 3 / Day 4 / Day 7 FTD sample thresholds before triggering budget changes. | Minimum spend gate ($300 floor), FTD sample sufficiency (`D3 >= 10`, `D4 >= 15`, `D7 >= 30`) |
+| **Ad Account Bans, Cloaking & Bonus-Abuse Fraud** | Separates genuine vendor underperformance from restricted ad accounts, broken postbacks, or baseline deposit fraud. | Ad account health status (`Restricted` / `Banned`), fraud risk flags, zero-repeat-deposit anomaly alerts |
+| **Subjective Media Buying Budget Allocations** | Translates multi-gate cohort metrics into deterministic, explainable budget routing commands with audit trails. | Automated `SCALE` (+30% budget), `KEEP`, `STOP`, or `REVIEW` action flags + triggering rule ID |
+| **Unvalidated Early Cut-Off Thresholds** | Backtests Day 3–7 decisions against mature Day 30 cohort performance to verify whether early rules cut profitable whales. | Day 30 mature cohort validation, false-positive `STOP` rate, early-to-mature LTV/ROAS alignment |
 
-### 1. Set the evaluation parameters
+---
 
-Open the dedicated configuration area and define the market/platform benchmarks, minimum sample requirements, minimum-spend protection threshold, and budget-action rules.
+## Step-by-Step Tutorial: How to Audit iGaming Traffic Vendors & Automate Budget Decisions
 
-The reference configuration includes:
+The analyzer operates on a repeatable **bi-weekly iGaming UA review cadence**: configure your GEO/channel benchmarks once, paste raw tracker exports, inspect the rule-triggered action flags, and backtest against mature Day 30 player data.
 
-- Minimum spend protection threshold: 300 currency units.
-- Minimum FTD samples: 10 at Day 3, 15 at Day 4, and 30 at Day 7.
-- Scale threshold: C/FTD at or below 85% of the applicable target.
-- Stop threshold: C/FTD at or above 125% of the applicable target.
-- Suggested scale adjustment: increase the next budget allocation by 30%.
+### Step 1: Configure GEO Benchmarks, Sample Gates & C/FTD Rules
+Open the dedicated `Configuration & Thresholds` tab to establish your operator unit economics and statistical guardrails:
 
-These are example starting parameters, not universal iGaming benchmarks. Replace them with targets validated against the actual market, acquisition channel, business economics, and historical performance.
+- **Minimum Spend Protection Floor:** Default set to `300 currency units` (prevents killing under-spent test campaigns prematurely).
+- **Cohort FTD Sample Sufficiency Gates:** Requires at least `10 FTDs at Day 3`, `15 FTDs at Day 4`, and `30 FTDs at Day 7` before performance rules fire.
+- **Automated Budget Action Triggers:**
+  - `SCALE` Threshold: Actual `C/FTD <= 85%` of the applicable GEO/platform target (triggers a suggested `+30%` budget allocation increase).
+  - `STOP` Threshold: Actual `C/FTD >= 125%` of the applicable target (given sample sufficiency is met).
 
-### 2. Import the existing data
+*(Note: Default values are illustrative reference points. Calibrate targets against your actual Casino/Sportsbook NGR margins, licensing jurisdiction, and payment processing costs.)*
 
-Export performance data from advertising platforms and attribution systems, or copy the relevant data from existing spreadsheets into the designated input area.
+### Step 2: Import S2S Postback, Affiliate & Ad Platform Exports
+Export cohort performance logs from your affiliate tracking software (e.g., Affilka, Income Access, Cellxpert, Scaleo), MMP (AppsFlyer, Adjust), or ad networks (Meta, Google Ads, Telegram, programmatic DSPs) and paste them into the input sheet:
 
-The source workflow covers vendor identity, market, platform, launch date, reporting date, spend, impressions, clicks, registration and deposit counts, retention, account health, and fraud-risk annotations.
+- **Campaign & Vendor Metadata:** Vendor/Affiliate ID, target GEO/market, traffic platform, launch date, and reporting snapshot date.
+- **Top-of-Funnel & Spend Metrics:** Total ad spend, impressions, clicks, and net active player registrations.
+- **Player Monetization & Risk Signals:** First-time deposits (FTD count), repeat deposit counts, early cohort retention, ad account health status, and manual fraud-risk annotations.
 
-Preserve the required field definitions and reporting periods. The analyzer cannot correct inconsistent attribution windows, incompatible currency units, or inaccurate source data simply by importing them.
+*(Maintain consistent attribution windows and currency units across imported rows.)*
 
-### 3. Review the results
+### Step 3: Audit Cohort KPIs & Execute `SCALE / KEEP / STOP / REVIEW` Actions
+Navigate to the `Decision Engine & KPI Dashboard` views to inspect the automated evaluation for every active vendor batch:
 
-Move to the KPI, decision, and dashboard views. The calculation framework derives acquisition costs, conversion rates, retention indicators, sample sufficiency, risk flags, benchmark deviations, and recommended actions.
+- **Statistical Sufficiency Check:** Verify whether a high C/FTD is a genuine failure (`STOP`) or simply an under-sampled cohort routed to `KEEP / MONITOR`.
+- **Operational & Fraud Gate:** Check if campaigns with suspiciously cheap FTDs but zero repeat deposits—or restricted ad accounts—have been intercepted and routed to `REVIEW`.
+- **Explainable Action Audit:** Read the exact rule trigger behind every recommendation before adjusting media-buying caps or affiliate CPA deals.
 
-Review the reason behind each recommendation before changing an allocation. A low cost per first-time depositor does not automatically establish that a vendor is profitable, and an adverse early result does not automatically justify termination.
+### Step 4: Backtest Against Mature Day 30 Outcomes & Export to Excel
+Run this workflow twice weekly during active campaign flights. Once historical player cohorts reach **Day 30 maturity**, log their realized outcomes into the historical validation view to verify whether your Day 3 and Day 7 C/FTD thresholds accurately predicted long-term player quality.
 
-### 4. Refresh the data periodically
+> 🎰 **Ready to standardize your twice-weekly iGaming traffic and affiliate reviews?** 
+> After testing the decision gates in the **[Free Browser-Based iGaming C/FTD Analyzer](YOUR_BROWSER_DEMO_URL)**, download the **[Reusable iGaming Vendor Evaluation Excel Workbook (.xlsx)](YOUR_EXCEL_DOWNLOAD_URL)** to maintain offline audit logs, store proprietary multi-GEO benchmark matrices, and run recurring cohort backtests with your UA team.
 
-Refresh the imported data during the regular budget-review cycle. The intended operating cadence is twice weekly, with additional investigation whenever account restrictions, attribution failures, or suspicious traffic patterns appear.
+---
 
-For historical batches, add the mature Day 30 outcome when it becomes available. Use these observations to review the quality of earlier decisions and recalibrate thresholds when the evidence supports a change.
+## Why I Built This Rule-Based iGaming Traffic Evaluation Framework
 
-**Set the rules. Import the data. Review the evidence. Make the decision. Refresh when the next review is due.**
+In high-velocity iGaming user acquisition, early cohort reporting creates a costly operational trap: **metrics look mathematically precise long before they are statistically reliable enough to justify scaling or cutting budget.**
 
-## Why I Built This
+Consider three common failure modes during an early campaign review:
+1. **The Cheap Registration Illusion:** A traffic source delivers massive registration volume at rock-bottom CPI/CPR, but converts almost zero first-time depositors (FTDs).
+2. **The Slow-Burn VIP Cohort:** A PPC or SEO vendor looks expensive on Day 3 C/FTD, yet attracts high-intent sportsbook or slots players who re-deposit heavily by Day 14.
+3. **Platform & Tracking Disruptions:** A historically strong media-buying agency shows a sudden C/FTD spike—not because traffic quality degraded, but because an ad account was shadow-restricted or an S2S postback pixel broke.
 
-Early acquisition reporting creates a specific management problem: the numbers can look precise before they are reliable enough to support a budget decision.
+### The "Day 3 Cohort Trap": Vendor A vs. Vendor B
+Imagine a Day 3 budget review where the target **Cost per FTD (C/FTD) benchmark is $40**:
+- **Vendor A** has spent **$300** and generated **10 FTDs** $\rightarrow$ `C/FTD = $30` (meets the 10-FTD Day 3 sample gate).
+- **Vendor B** has spent **$100** and generated **2 FTDs** $\rightarrow$ `C/FTD = $50` (25% worse than the $40 benchmark).
 
-A vendor may deliver registrations at a low cost but produce very few first-time depositors. Another may appear expensive during the first few days but attract users who return and deposit again. A third may show a sudden performance decline because an advertising account has been restricted or attribution has stopped working correctly.
+In a naive spreadsheet, a media buyer immediately terminates Vendor B for exceeding target CPA and scales Vendor A. However, Vendor B has only generated **2 FTDs**—well below the 10-FTD statistical sample floor and the $300 spend protection threshold. Cutting Vendor B at Day 3 is a **premature termination driven by small-sample noise**. Meanwhile, before giving Vendor A +30% more budget, the analyst still needs to verify that those 10 FTDs aren't baseline bonus abusers with zero repeat deposits.
 
-Treating all three situations as ordinary acquisition performance leads to different kinds of waste: scaling low-quality traffic, terminating promising vendors, or blaming a vendor for a platform-side failure.
+I built this analyzer to turn that exact diagnostic logic into a **repeatable, rule-based decision framework**—eliminating gut-feel debates during bi-weekly budget meetings.
 
-Consider a hypothetical Day 3 review. Vendor A has spent 300 currency units and generated 10 first-time depositors, giving it a C/FTD of 30. Vendor B has spent 100 and generated two first-time depositors, giving it a C/FTD of 50. If the applicable benchmark is 40, Vendor A looks more efficient on cost. Vendor B's result, however, is based on only two first-time depositors and falls below the configured minimum sample of 10.
+---
 
-The correct conclusion is not that Vendor B has definitively failed. Its evidence is insufficient. Vendor A may qualify for further evaluation, but repeat deposits, retention, account health, and traffic quality still matter before additional budget is committed.
+## Ad-Hoc Affiliate Spreadsheets vs. Rule-Based iGaming Decision Engine
 
-I built this analyzer to make that reasoning reusable. It turns recurring questions into a consistent review framework instead of requiring every analyst to reconstruct the logic from scratch during a budget meeting.
+| iGaming UA Evaluation Dimension | Traditional Ad-Hoc Trackers & Gut-Feel Reviews | Rule-Based iGaming Vendor Analyzer (This Tool) |
+| :--- | :--- | :--- |
+| **Early Scaling Decisions (Day 3–7)** | Media buyers scale budgets aggressively based on a few cheap early FTDs, risking heavy exposure to low-LTV traffic. | Enforces **D3 (10), D4 (15), and D7 (30) FTD sample gates** plus repeat-deposit checks before issuing a `SCALE` (+30%) flag. |
+| **Underperforming Vendor Cut-Offs** | Promising affiliates or ad sets are paused prematurely due to high C/FTD variance on tiny spend volumes. | Applies a **$300 minimum spend protection floor** and sample sufficiency check to separate statistical noise from true failure (`STOP`). |
+| **Baseline Fraud & Bonus Abuse Detection** | Cheap registrations and minimum baseline deposits mask automated bot rings or zero-retention incentive traffic. | Cross-checks C/FTD efficiency against **repeat deposit progression, early retention, and fraud annotations** to trigger `REVIEW`. |
+| **Ad Account Bans & Postback Outages** | Sudden drops in FTD conversion caused by Meta/Google account restrictions or S2S tracking bugs are blamed on vendor quality. | Dedicated **account-health and operational risk gates** isolate restricted accounts for manual remediation rather than blind termination. |
+| **Multi-GEO & Multi-Channel Benchmarking** | Analysts apply inconsistent mental C/FTD targets across Tier-1 (UK/EU), LatAm (Brazil/Mexico), and Asian markets. | Centralizes a **configurable GEO × Platform benchmark matrix** so every vendor is scored against standardized regional targets. |
+| **Threshold Calibration & Day 30 Backtesting** | Early Day 3/Day 7 cut-off rules are never audited against mature 30-day cohort profitability. | Links early decision batches to **mature Day 30 outcome records** to audit false positives and refine C/FTD tolerance bands. |
 
-## Common iGaming Acquisition Problems This Solves
+---
 
-| Problem | Without This Tool | With This Tool |
-|---|---|---|
-| Premature scaling | A low early acquisition cost is mistaken for reliable evidence of quality. | Sample requirements and additional quality indicators provide context before scaling. |
-| Premature termination | A noisy result from a small cohort triggers a stop decision. | Insufficient evidence is distinguished from a sufficiently sampled performance failure. |
-| Fraudulent or low-quality traffic | Cheap registrations and initial deposits conceal weak repeat-deposit behavior. | Deposit progression, retention indicators, and fraud annotations provide additional warning signals. |
-| Platform-side disruption | Account restrictions or tracking failures are attributed to vendor capability. | Account-health and risk gates route affected cases to protection or manual review. |
-| Inconsistent vendor comparisons | Analysts apply different thresholds to different markets or platforms. | A centralized benchmark matrix provides a common, configurable evaluation framework. |
-| Unverified decision rules | Early decisions are debated without checking their eventual outcomes. | Mature historical batches can be reviewed against configured Day 30 outcome criteria. |
+## Who This iGaming Analyzer Is Built For: Roles & Workflows
 
-## Who This Is For
+This dual-format (Browser + Excel) evaluation toolkit is designed for performance marketing and commercial teams across online casinos, sportsbooks, and iGaming agencies:
 
-This tool is intended for iGaming acquisition managers, affiliate and media-buying teams, growth analysts, performance-marketing leads, and budget owners who regularly compare external traffic vendors across markets and advertising platforms.
+- **iGaming User Acquisition (UA) & Performance Marketing Managers:** Standardize your twice-weekly budget allocation meetings. Use the **Cost per FTD (C/FTD) decision calculator** to defend `SCALE`, `KEEP`, and `STOP` actions with transparent, rule-based evidence across Meta, Google, TikTok, and programmatic DSPs.
+- **Casino & Sportsbook Affiliate Managers:** Audit external affiliate partners and sub-affiliate networks objectively. Use the **early cohort quality analyzer** to spot baseline CPA abuse (affiliates delivering minimum-deposit FTDs with zero repeat deposits) before paying out uncapped commissions.
+- **Media Buying Agencies & Arbitrage Teams:** Protect your ad budgets across volatile traffic channels. Use the **minimum-spend and sample-gate workbook** to prevent junior media buyers from killing high-potential campaigns during the Day 3 learning phase or scaling restricted ad accounts.
+- **iGaming BI Analysts, Growth Leads & CRM Teams:** Bridge the gap between raw attribution exports and executive reporting. Use the **Day 30 historical backtesting sheet** to calibrate whether your early D3/D7 C/FTD thresholds actually correlate with mature 30-day Net Gaming Revenue (NGR).
+- **CMOs, Heads of Growth & Budget Owners:** Establish centralized governance over external acquisition spend without waiting months to build custom data-warehouse BI pipelines.
 
-It is particularly useful when a team manages many vendors, conducts frequent budget reviews, and needs consistent decision explanations without building a full analytics infrastructure.
+---
 
-It is not a replacement for an attribution platform, fraud-detection service, player-level lifetime-value model, financial reporting system, or experienced risk review. It does not guarantee Day 30 revenue or establish profitability from early indicators alone.
+## Industry Use Cases & Long-Tail iGaming Acquisition Scenarios
 
-No spreadsheet expertise is needed to begin with the browser version. Open it and start reviewing the workflow. Use the Excel version when offline records, repeatable internal analysis, and greater control over the working model are important.
+Whether you are launching a new crypto casino, scaling a localized LatAm sportsbook, or managing 50+ CPA/Hybrid affiliates, this framework adapts to specific iGaming traffic scenarios:
 
-## About
+### 1. Affiliate CPA & Hybrid Deal Quality Auditing (Preventing Baseline Fraud)
+In CPA and Hybrid affiliate structures, unscrupulous traffic sources often game the baseline deposit threshold—generating cheap FTDs that never place a second wager. By evaluating **repeat-deposit ratios and early retention alongside C/FTD**, affiliate managers can route suspicious traffic batches to `REVIEW` before approving cap increases.
 
-I build lightweight trackers and decision-support tools for recurring business problems that involve too many moving parts to manage reliably in one's head or across disconnected spreadsheets.
+### 2. High-Volatility Social & In-App Media Buying (Meta, Google, Telegram & Pop/Push)
+Paid media campaigns in restricted iGaming verticals face frequent ad account bans, creative rejections, and attribution tracking drops. The analyzer's **Account Health Gate** ensures that when a top-performing vendor suffers a platform-side restriction, the campaign is flagged for operational protection rather than misclassified as poor traffic quality.
 
-The central question is practical: **What information needs to be in one place to make the next decision more confidently?**
+### 3. Multi-GEO Sportsbook & Casino Launch Calibration (Tier-1 vs. Emerging Markets)
+A $35 C/FTD might be highly profitable in regulated European or North American jurisdictions but catastrophic in high-volume, lower-ARPU emerging markets (such as Brazil, India, or LatAm). Use the **Market × Platform Benchmark Matrix** to normalize vendor evaluation across diverse currencies and regional player economics.
 
-The iGaming Vendor Early Performance & Decision Analyzer is one example of this approach. It packages a repeatable analytical process into an accessible tool, with explicit rules, visible assumptions, and a path to review decisions against subsequent outcomes.
+---
+
+### Operational Scope & Analytical Disclaimer
+*This toolkit is a rule-based early cohort decision-support model—not a real-time S2S attribution tracker, anti-fraud firewall, player-level predictive LTV engine, or statutory financial ledger. A favorable Day 3 or Day 7 C/FTD does not guarantee Day 30 Net Gaming Revenue (NGR) or net profitability. Always ensure imported data uses consistent attribution windows and currency units, and combine spreadsheet outputs with experienced risk and compliance review.*
+
+---
+
+## About the Creator
+
+I build lightweight, inspectable decision-support tools for high-stakes operational workflows where too many moving variables get lost across disconnected spreadsheets. The guiding question is simple: **What exact evidence and statistical guardrails must be in one place to make the next budget commitment confidently?**
 
 ## Technical Details
 
