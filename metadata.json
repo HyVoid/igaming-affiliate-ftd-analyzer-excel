@@ -1,0 +1,6 @@
+{
+  "name": "iGaming Marketing Vendor Performance & Decision Analyzer",
+  "description": "Production SaaS decision analyzer and cohort economics engine for 50+ iGaming marketing vendors across Meta and TikTok with tiered gating rules, real-time formula recalculation, and historical backtesting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
