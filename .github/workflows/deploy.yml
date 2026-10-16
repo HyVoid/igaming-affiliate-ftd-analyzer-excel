@@ -7,6 +7,7 @@ on:
       - master
   workflow_dispatch:
 
+# Grant GITHUB_TOKEN write access to push to the gh-pages branch
 permissions:
   contents: write
 
@@ -17,7 +18,7 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v4
 
-      # Note: Disabled npm Cache Setup (cache removed) to prevent
+      # Note: Disabled npm Cache Setup (cache removed) to prevent:
       # "Dependencies lock file is not found in /home/runner/work/. Supported file patterns: package-lock.json,npm-shrinkwrap.json,yarn.lock"
       - name: Setup Node.js Environment
         uses: actions/setup-node@v4
@@ -25,14 +26,20 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build Production Assets
-        run: npm run build
+        run: |
+          npm run build
+          # Prevent Jekyll processing to preserve Vite asset folders
+          touch dist/.nojekyll
+          # SPA routing fallback for direct URLs
+          cp dist/index.html dist/404.html
 
       - name: Deploy to GitHub Pages (gh-pages Branch)
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: dist
           clean: true
