@@ -1,4 +1,6 @@
 # iGaming Affiliate & Media Buying Excel Template: Cost per FTD (C/FTD) & Cohort Traffic Analyzer
+<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/53808d1c-6d13-4502-a81d-ef846d596902" />
+<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/268198c3-9abc-4547-9c47-42f447f390e6" />
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Browser%20%7C%20Excel-217346.svg)
@@ -9,7 +11,7 @@
 > **Access the iGaming Traffic & C/FTD Decision Tools**
 >
 > - 🌐 **[Launch the Free Web-Based iGaming C/FTD & Traffic Analyzer](YOUR_BROWSER_DEMO_URL)** — Audit early vendor cohorts, test minimum FTD sample thresholds, and simulate media-buying budget rules directly in your browser without installing software or creating an account.
-> - 📥 **[Download the iGaming Affiliate & Media Buying Excel Workbook (.xlsx)](YOUR_EXCEL_DOWNLOAD_URL)** — Get the full spreadsheet template for offline bi-weekly budget reviews, multi-GEO benchmark calibration, and historical Day 30 ROI backtesting.
+> - 📥 **[Download the iGaming Affiliate & Media Buying Excel Workbook (.xlsx)](https://theseusworkshop.com/l/fccmw)** — Get the full spreadsheet template for offline bi-weekly budget reviews, multi-GEO benchmark calibration, and historical Day 30 ROI backtesting.
 >
 > *No signup. No installation. Free browser access. *
 
