@@ -2,7 +2,7 @@
 <img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/53808d1c-6d13-4502-a81d-ef846d596902" />
 <img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/268198c3-9abc-4547-9c47-42f447f390e6" />
 
-![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 ![Platform](https://img.shields.io/badge/Platform-Browser%20%7C%20Excel-217346.svg)
 ![Category](https://img.shields.io/badge/Tool-iGaming%20UA%20%26%20Affiliate%20BI-2251FF.svg)
 
