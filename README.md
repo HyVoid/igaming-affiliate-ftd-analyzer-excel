@@ -142,10 +142,12 @@ I build lightweight, inspectable decision-support tools for high-stakes operatio
 
 ## Technical Details
 
-<details>
-<summary>For technical reviewers, Excel practitioners, and collaborators</summary>
+> For technical reviewers, Excel practitioners, and collaborators
 
 ### Workbook Architecture
+
+<details>
+<summary>展开查看：Workbook Architecture</summary>
 
 The analyzer uses five connected worksheets. Each worksheet has a defined responsibility, separating configuration, raw evidence, metric calculation, decision rules, and management review.
 
@@ -182,6 +184,9 @@ This separation is intentional: changing a benchmark should not require rebuildi
 
 #### Input-to-output dependency
 
+<details>
+<summary>Input-to-output dependency</summary>
+
 | Input or condition | Affected calculation | Decision implication |
 |---|---|---|
 | Spend and FTD count | Cost per FTD | Acquisition cost comparison |
@@ -193,7 +198,14 @@ This separation is intentional: changing a benchmark should not require rebuildi
 | Market and platform | Target benchmark lookup | Establishes the applicable comparison target |
 | Mature Day 30 revenue | Historical outcome review | Supports retrospective rule evaluation |
 
+</details>
+
+</details>
+
 ### The Business Logic Behind the Decision Engine
+
+<details>
+<summary>The Business Logic Behind the Decision Engine</summary>
 
 The system does not treat a low acquisition cost as sufficient proof of vendor quality. It separates four questions that should be answered in order:
 
@@ -213,9 +225,17 @@ The decision labels mean:
 
 These are recommendations, not automated payment, account, or campaign actions. Final decisions remain subject to operational context and human review.
 
+</details>
+
 ### Three Traps That Catch Even Experienced Acquisition Teams
 
+<details>
+<summary>Three Traps That Catch Even Experienced Acquisition Teams</summary>
+
 #### Trap 1: Treating a low cost per FTD as proof of quality
+
+<details>
+<summary>Trap 1: Treating a low cost per FTD as proof of quality</summary>
 
 **The decision:** Increase a vendor's budget because its early cost per FTD is below the target.
 
@@ -249,7 +269,12 @@ The source configuration uses an example scale ratio of `85%`. This is a configu
 
 </details>
 
+</details>
+
 #### Trap 2: Stopping a vendor before the sample is sufficient
+
+<details>
+<summary>Trap 2: Stopping a vendor before the sample is sufficient</summary>
 
 **The decision:** Stop a vendor because its initial acquisition cost exceeds the target.
 
@@ -282,7 +307,12 @@ The configured values should be validated against the actual workbook's paramete
 
 </details>
 
+</details>
+
 #### Trap 3: Confusing operational risk with poor acquisition performance
+
+<details>
+<summary>Trap 3: Confusing operational risk with poor acquisition performance</summary>
 
 **The decision:** Reduce or stop a vendor because the dashboard shows weak or incomplete performance.
 
@@ -316,7 +346,14 @@ Exact precedence, allowed status values, and formula behavior should be checked 
 
 </details>
 
+</details>
+
+</details>
+
 ### Example Scenario
+
+<details>
+<summary>Example Scenario</summary>
 
 Consider a hypothetical vendor acquired through a specific market and platform combination. The figures below illustrate how the framework should be interpreted; they are not reported results from a live campaign.
 
@@ -362,7 +399,12 @@ The engine next checks whether the cohort has reached the relevant checkpoint, w
 
 The operational conclusion is not “this vendor is good” or “this vendor is bad.” It is: **the observed cost is better than the target but does not meet the configured scale condition; continue monitoring unless a separate risk condition changes the action.**
 
+</details>
+
 ### Formula Reference
+
+<details>
+<summary>Formula Reference</summary>
 
 The following formulas describe the intended calculation logic. They are reference patterns, not a substitute for inspecting the exact formulas in a particular workbook release. Cell references, table names, structured references, and spill ranges may differ by implementation.
 
@@ -496,7 +538,11 @@ Backtesting can expose systematic errors—for example, scaling cohorts that lat
 </details>
 
 </details>
+
 ### Validation Rules
+
+<details>
+<summary>Validation Rules</summary>
 
 The workbook depends on consistent source data, valid cohort dates, compatible market/platform benchmarks, and correctly configured thresholds. The following rules describe the intended validation behavior. Exact dropdown values and formula-level error handling should be verified against the deployed workbook.
 
@@ -529,6 +575,9 @@ The workbook depends on consistent source data, valid cohort dates, compatible m
 
 #### Data-quality and error-handling notes
 
+<details>
+<summary>Data-quality and error-handling notes</summary>
+
 - **Zero denominator:** Cost and conversion formulas may return `0` when their denominator is zero. This avoids a division error but does not establish a measured zero cost or conversion rate. Review the underlying count before interpreting the result.
 - **Unmatched market/platform:** A benchmark lookup failure should be resolved at the source or configuration level. Do not assume that a missing target means the vendor has met its target.
 - **Missing vendor name:** The record identifier may remain blank when the vendor-name field is blank, depending on the deployed formula.
@@ -539,7 +588,14 @@ The workbook depends on consistent source data, valid cohort dates, compatible m
 
 Validation reduces preventable errors, but it cannot establish that every source report is complete, every conversion is legitimate, or every attribution event is correctly assigned. Those conditions require operational checks and reconciliation with the underlying platforms.
 
+</details>
+
+</details>
+
 ### Runtime Requirements
+
+<details>
+<summary>Runtime Requirements</summary>
 
 | Item | Requirement or recommendation |
 |---|---|
@@ -553,9 +609,17 @@ Validation reduces preventable errors, but it cannot establish that every source
 
 The actual supported version should be confirmed against the workbook release being distributed. A function's availability in an Excel version does not, by itself, guarantee that every formula behaves identically across environments.
 
+</details>
+
 ### Operating Procedure
 
+<details>
+<summary>Operating Procedure</summary>
+
 #### Twice-weekly vendor and budget review
+
+<details>
+<summary>Twice-weekly vendor and budget review</summary>
 
 1. **Import source records.** Update `02_Raw_Input` with the latest available vendor, market, platform, spend, conversion, retention, and risk information.
 2. **Check data quality.** Review missing identifiers, unmatched benchmarks, inconsistent dates, implausible counts, and tracking incidents.
@@ -564,7 +628,12 @@ The actual supported version should be confirmed against the workbook release be
 5. **Record the decision.** Document relevant context and manual overrides in the appropriate operational records.
 6. **Revisit mature cohorts.** Compare early decisions with available Day 30 outcomes and investigate systematic errors.
 
+</details>
+
 #### Parameter maintenance
+
+<details>
+<summary>Parameter maintenance</summary>
 
 - Update market/platform benchmark values when the business's target economics change.
 - Adjust sample thresholds and action ratios through the configuration area rather than editing individual decision formulas.
@@ -572,7 +641,14 @@ The actual supported version should be confirmed against the workbook release be
 - Preserve formula-generated ranges and verify outputs after structural changes.
 - Re-test representative cases after modifying risk rules or decision thresholds.
 
+</details>
+
+</details>
+
 ### Limitations
+
+<details>
+<summary>Limitations</summary>
 
 This analyzer is a rules-based decision-support framework. It is not a predictive guarantee of Day 30 revenue and does not automatically execute campaign, payment, or account actions.
 
@@ -580,7 +656,12 @@ Early acquisition signals can change because of attribution delays, later charge
 
 Day 30 backtesting can help identify where the rules need adjustment, but historical performance does not guarantee future accuracy. Results should be segmented by relevant market, platform, and operating conditions where sufficient data exists.
 
+</details>
+
 ### Troubleshooting
+
+<details>
+<summary>Troubleshooting</summary>
 
 | Symptom | Likely cause | Recommended check |
 |---|---|---|
