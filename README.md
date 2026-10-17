@@ -10,8 +10,8 @@
 
 > **Access the iGaming Traffic & C/FTD Decision Tools**
 >
-> - 🌐 **[Launch the Free Web-Based iGaming C/FTD & Traffic Analyzer](YOUR_BROWSER_DEMO_URL)** — Audit early vendor cohorts, test minimum FTD sample thresholds, and simulate media-buying budget rules directly in your browser without installing software or creating an account.
-> - 📥 **[Download the iGaming Affiliate & Media Buying Excel Workbook (.xlsx)](https://theseusworkshop.com/l/fccmw)** — Get the full spreadsheet template for offline bi-weekly budget reviews, multi-GEO benchmark calibration, and historical Day 30 ROI backtesting.
+> - 🌐 **[Launch the Free Web-Based iGaming C/FTD & Traffic Analyzer](https://hyvoid.github.io/igaming-affiliate-ftd-analyzer-excel/)** — Audit early vendor cohorts, test minimum FTD sample thresholds, and simulate media-buying budget rules directly in your browser without installing software or creating an account.
+> - 📥 **[Download the iGaming Affiliate & Media Buying Excel Workbook (.xlsx)](https://theseusworkshop.com/l/fccmw?utm_source=github&utm_medium=GitHub%20README)** — Get the full spreadsheet template for offline bi-weekly budget reviews, multi-GEO benchmark calibration, and historical Day 30 ROI backtesting.
 >
 > *No signup. No installation. Free browser access. *
 
@@ -67,7 +67,7 @@ Navigate to the `Decision Engine & KPI Dashboard` views to inspect the automated
 Run this workflow twice weekly during active campaign flights. Once historical player cohorts reach **Day 30 maturity**, log their realized outcomes into the historical validation view to verify whether your Day 3 and Day 7 C/FTD thresholds accurately predicted long-term player quality.
 
 > 🎰 **Ready to standardize your twice-weekly iGaming traffic and affiliate reviews?** 
-> After testing the decision gates in the **[Free Browser-Based iGaming C/FTD Analyzer](YOUR_BROWSER_DEMO_URL)**, download the **[Reusable iGaming Vendor Evaluation Excel Workbook (.xlsx)](YOUR_EXCEL_DOWNLOAD_URL)** to maintain offline audit logs, store proprietary multi-GEO benchmark matrices, and run recurring cohort backtests with your UA team.
+> After testing the decision gates in the **[Free Browser-Based iGaming C/FTD Analyzer](https://hyvoid.github.io/igaming-affiliate-ftd-analyzer-excel/)**, download the **[Reusable iGaming Vendor Evaluation Excel Workbook (.xlsx)](https://theseusworkshop.com/l/fccmw?utm_source=github&utm_medium=GitHub%20README)** to maintain offline audit logs, store proprietary multi-GEO benchmark matrices, and run recurring cohort backtests with your UA team.
 
 ---
 
