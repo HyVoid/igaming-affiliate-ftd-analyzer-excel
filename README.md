@@ -142,12 +142,11 @@ I build lightweight, inspectable decision-support tools for high-stakes operatio
 
 ## Technical Details
 
-> For technical reviewers, Excel practitioners, and collaborators
-
-### Workbook Architecture
+<details>
+<summary>For technical reviewers, Excel practitioners, and collaborators</summary>
 
 <details>
-<summary>展开查看：Workbook Architecture</summary>
+<summary><strong>Workbook Architecture</strong></summary>
 
 The analyzer uses five connected worksheets. Each worksheet has a defined responsibility, separating configuration, raw evidence, metric calculation, decision rules, and management review.
 
@@ -182,10 +181,8 @@ Configuration values feed the calculations and decision rules. Raw records suppl
 
 This separation is intentional: changing a benchmark should not require rebuilding the workbook's calculation logic, and a favorable performance metric should not bypass a blocking risk condition.
 
-#### Input-to-output dependency
-
 <details>
-<summary>Input-to-output dependency</summary>
+<summary><strong>Input-to-output dependency</strong></summary>
 
 | Input or condition | Affected calculation | Decision implication |
 |---|---|---|
@@ -202,10 +199,8 @@ This separation is intentional: changing a benchmark should not require rebuildi
 
 </details>
 
-### The Business Logic Behind the Decision Engine
-
 <details>
-<summary>The Business Logic Behind the Decision Engine</summary>
+<summary><strong>The Business Logic Behind the Decision Engine</strong></summary>
 
 The system does not treat a low acquisition cost as sufficient proof of vendor quality. It separates four questions that should be answered in order:
 
@@ -227,15 +222,11 @@ These are recommendations, not automated payment, account, or campaign actions. 
 
 </details>
 
-### Three Traps That Catch Even Experienced Acquisition Teams
+<details>
+<summary><strong>Three Traps That Catch Even Experienced Acquisition Teams</strong></summary>
 
 <details>
-<summary>Three Traps That Catch Even Experienced Acquisition Teams</summary>
-
-#### Trap 1: Treating a low cost per FTD as proof of quality
-
-<details>
-<summary>Trap 1: Treating a low cost per FTD as proof of quality</summary>
+<summary><strong>Trap 1: Treating a low cost per FTD as proof of quality</strong></summary>
 
 **The decision:** Increase a vendor's budget because its early cost per FTD is below the target.
 
@@ -251,7 +242,7 @@ A low cost per FTD measures acquisition efficiency for one event. It does not es
 **Decision implication:** A cheap but immature or risky cohort should remain under observation or review rather than receiving an automatic budget increase.
 
 <details>
-<summary>Formula and rule reference</summary>
+<summary><strong>Formula and rule reference</strong></summary>
 
 Conceptually:
 
@@ -271,10 +262,8 @@ The source configuration uses an example scale ratio of `85%`. This is a configu
 
 </details>
 
-#### Trap 2: Stopping a vendor before the sample is sufficient
-
 <details>
-<summary>Trap 2: Stopping a vendor before the sample is sufficient</summary>
+<summary><strong>Trap 2: Stopping a vendor before the sample is sufficient</strong></summary>
 
 **The decision:** Stop a vendor because its initial acquisition cost exceeds the target.
 
@@ -292,7 +281,7 @@ This is not permission to ignore a genuine account restriction or confirmed frau
 **Decision implication:** Preserve the distinction between “not enough evidence yet” and “enough evidence to stop.” The two conditions should not produce the same conclusion.
 
 <details>
-<summary>Sample-sufficiency rule reference</summary>
+<summary><strong>Sample-sufficiency rule reference</strong></summary>
 
 The intended checkpoint rules are:
 
@@ -309,10 +298,8 @@ The configured values should be validated against the actual workbook's paramete
 
 </details>
 
-#### Trap 3: Confusing operational risk with poor acquisition performance
-
 <details>
-<summary>Trap 3: Confusing operational risk with poor acquisition performance</summary>
+<summary><strong>Trap 3: Confusing operational risk with poor acquisition performance</strong></summary>
 
 **The decision:** Reduce or stop a vendor because the dashboard shows weak or incomplete performance.
 
@@ -329,7 +316,7 @@ The risk gate separates blocking conditions from situations that require human i
 **Decision implication:** The next action should address the actual failure mode—account access, tracking integrity, traffic quality, sample maturity, or acquisition economics—instead of using budget changes as a substitute for diagnosis.
 
 <details>
-<summary>Risk-gate interpretation</summary>
+<summary><strong>Risk-gate interpretation</strong></summary>
 
 The source framework includes the following conditions:
 
@@ -350,10 +337,8 @@ Exact precedence, allowed status values, and formula behavior should be checked 
 
 </details>
 
-### Example Scenario
-
 <details>
-<summary>Example Scenario</summary>
+<summary><strong>Example Scenario</strong></summary>
 
 Consider a hypothetical vendor acquired through a specific market and platform combination. The figures below illustrate how the framework should be interpreted; they are not reported results from a live campaign.
 
@@ -401,15 +386,13 @@ The operational conclusion is not “this vendor is good” or “this vendor is
 
 </details>
 
-### Formula Reference
-
 <details>
-<summary>Formula Reference</summary>
+<summary><strong>Formula Reference</strong></summary>
 
 The following formulas describe the intended calculation logic. They are reference patterns, not a substitute for inspecting the exact formulas in a particular workbook release. Cell references, table names, structured references, and spill ranges may differ by implementation.
 
 <details>
-<summary>1. Raw Input: record keys and data-quality checks</summary>
+<summary><strong>1. Raw Input: record keys and data-quality checks</strong></summary>
 
 **Purpose:** Identify source records and make missing or inconsistent inputs visible before interpreting calculated metrics.
 
@@ -426,7 +409,7 @@ A data-quality probe should separately identify missing required fields, invalid
 </details>
 
 <details>
-<summary>2. KPI Engine: elapsed days, acquisition costs, and conversion rates</summary>
+<summary><strong>2. KPI Engine: elapsed days, acquisition costs, and conversion rates</strong></summary>
 
 **Purpose:** Standardize cohort age and calculate comparable acquisition and funnel metrics.
 
@@ -467,7 +450,7 @@ These patterns use zero when the denominator is zero to avoid division errors. I
 </details>
 
 <details>
-<summary>3. KPI Engine: retention and CP Score</summary>
+<summary><strong>3. KPI Engine: retention and CP Score</strong></summary>
 
 **Purpose:** Add downstream quality indicators to acquisition-cost comparisons.
 
@@ -492,7 +475,7 @@ A score should be interpreted alongside the raw metrics, sample size, milestone,
 </details>
 
 <details>
-<summary>4. Decision Engine: sample sufficiency, risk gates, and action thresholds</summary>
+<summary><strong>4. Decision Engine: sample sufficiency, risk gates, and action thresholds</strong></summary>
 
 **Purpose:** Enforce the intended decision sequence: sample sufficiency, risk checks, then benchmark comparison.
 
@@ -522,7 +505,7 @@ The budget adjustment factor is derived from the configured action multiplier. I
 </details>
 
 <details>
-<summary>5. Executive Dashboard: historical Day 30 backtesting</summary>
+<summary><strong>5. Executive Dashboard: historical Day 30 backtesting</strong></summary>
 
 **Purpose:** Compare early recommendations with later observed outcomes so the team can evaluate whether its rules are useful.
 
@@ -539,10 +522,8 @@ Backtesting can expose systematic errors—for example, scaling cohorts that lat
 
 </details>
 
-### Validation Rules
-
 <details>
-<summary>Validation Rules</summary>
+<summary><strong>Validation Rules</strong></summary>
 
 The workbook depends on consistent source data, valid cohort dates, compatible market/platform benchmarks, and correctly configured thresholds. The following rules describe the intended validation behavior. Exact dropdown values and formula-level error handling should be verified against the deployed workbook.
 
@@ -573,10 +554,8 @@ The workbook depends on consistent source data, valid cohort dates, compatible m
 | Calculation mode | Workbook should use automatic recalculation | Recalculate if results appear stale |
 | Formula references | Formula ranges and configured table names must remain intact | Investigate `#REF!`, `#VALUE!`, and similar errors before using recommendations |
 
-#### Data-quality and error-handling notes
-
 <details>
-<summary>Data-quality and error-handling notes</summary>
+<summary><strong>Data-quality and error-handling notes</strong></summary>
 
 - **Zero denominator:** Cost and conversion formulas may return `0` when their denominator is zero. This avoids a division error but does not establish a measured zero cost or conversion rate. Review the underlying count before interpreting the result.
 - **Unmatched market/platform:** A benchmark lookup failure should be resolved at the source or configuration level. Do not assume that a missing target means the vendor has met its target.
@@ -592,10 +571,8 @@ Validation reduces preventable errors, but it cannot establish that every source
 
 </details>
 
-### Runtime Requirements
-
 <details>
-<summary>Runtime Requirements</summary>
+<summary><strong>Runtime Requirements</strong></summary>
 
 | Item | Requirement or recommendation |
 |---|---|
@@ -611,15 +588,11 @@ The actual supported version should be confirmed against the workbook release be
 
 </details>
 
-### Operating Procedure
+<details>
+<summary><strong>Operating Procedure</strong></summary>
 
 <details>
-<summary>Operating Procedure</summary>
-
-#### Twice-weekly vendor and budget review
-
-<details>
-<summary>Twice-weekly vendor and budget review</summary>
+<summary><strong>Twice-weekly vendor and budget review</strong></summary>
 
 1. **Import source records.** Update `02_Raw_Input` with the latest available vendor, market, platform, spend, conversion, retention, and risk information.
 2. **Check data quality.** Review missing identifiers, unmatched benchmarks, inconsistent dates, implausible counts, and tracking incidents.
@@ -630,10 +603,8 @@ The actual supported version should be confirmed against the workbook release be
 
 </details>
 
-#### Parameter maintenance
-
 <details>
-<summary>Parameter maintenance</summary>
+<summary><strong>Parameter maintenance</strong></summary>
 
 - Update market/platform benchmark values when the business's target economics change.
 - Adjust sample thresholds and action ratios through the configuration area rather than editing individual decision formulas.
@@ -645,10 +616,8 @@ The actual supported version should be confirmed against the workbook release be
 
 </details>
 
-### Limitations
-
 <details>
-<summary>Limitations</summary>
+<summary><strong>Limitations</strong></summary>
 
 This analyzer is a rules-based decision-support framework. It is not a predictive guarantee of Day 30 revenue and does not automatically execute campaign, payment, or account actions.
 
@@ -658,10 +627,8 @@ Day 30 backtesting can help identify where the rules need adjustment, but histor
 
 </details>
 
-### Troubleshooting
-
 <details>
-<summary>Troubleshooting</summary>
+<summary><strong>Troubleshooting</strong></summary>
 
 | Symptom | Likely cause | Recommended check |
 |---|---|---|
@@ -672,6 +639,8 @@ Day 30 backtesting can help identify where the rules need adjustment, but histor
 | Vendor identifier is blank | Required source fields may be missing | Check the vendor-name field and the identifier formula |
 | Implausible retention or conversion rate | Counts may use inconsistent cohort definitions or observation windows | Reconcile event definitions and eligible population |
 | Unexpected `SCALE` or `STOP` recommendation | Configuration, risk precedence, or benchmark selection may not match expectations | Inspect the trigger reason, applicable benchmark, sample status, and configured thresholds |
+
+</details>
 
 </details>
 
