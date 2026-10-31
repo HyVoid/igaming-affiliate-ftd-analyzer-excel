@@ -111,20 +111,25 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <>
       {/* Mobile Top Header (< md viewports) */}
       <div className="md:hidden sticky top-0 z-40 bg-white border-b border-[var(--nav-border)] h-[56px] px-4 flex items-center justify-between shadow-xs">
-        <div className="flex items-center space-x-2.5">
+        <div className="flex items-center space-x-2.5 min-w-0">
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="p-1.5 rounded-lg text-slate-600 hover:bg-slate-100 active:scale-95 transition-all"
+            className="p-1.5 rounded-lg text-slate-600 hover:bg-slate-100 active:scale-95 transition-all shrink-0"
             aria-label="Toggle Navigation Menu"
           >
             {isMobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
-          <div className="w-7 h-7 rounded-md bg-[var(--color-primary)] flex items-center justify-center text-white font-bold text-xs">
-            iG
+          <div className="w-7 h-7 rounded-md bg-[var(--color-primary)] flex items-center justify-center text-white font-bold text-xs shrink-0 tracking-wider">
+            TW
           </div>
-          <span className="font-heading text-[15px] font-bold text-[var(--color-primary)] tracking-tight">
-            {currentTabObj?.num} {currentTabObj?.label}
-          </span>
+          <div className="flex flex-col min-w-0">
+            <span className="font-heading text-[13.5px] font-bold text-[var(--color-primary)] tracking-tight leading-tight truncate">
+              Theseus Workshop
+            </span>
+            <span className="text-[9.5px] font-medium text-[var(--color-muted)] truncate leading-none mt-0.5">
+              iGaming Vendor Decision Analyzer
+            </span>
+          </div>
         </div>
 
         <div className="flex items-center space-x-2">
@@ -166,16 +171,19 @@ export const Sidebar: React.FC<SidebarProps> = ({
           {/* Header */}
           <div className="h-[64px] px-4 flex items-center justify-between border-b border-slate-100">
             <div className="flex items-center space-x-3 overflow-hidden">
-              <div className="w-8 h-8 rounded-lg bg-[var(--color-primary)] shrink-0 flex items-center justify-center text-white font-bold text-sm shadow-xs">
-                iG
+              <div className="w-8 h-8 rounded-lg bg-[var(--color-primary)] shrink-0 flex items-center justify-center text-white font-bold text-xs shadow-xs tracking-wider">
+                TW
               </div>
               {!isCollapsed && (
                 <div className="flex flex-col min-w-0">
-                  <span className="font-heading text-[14px] font-bold text-[var(--color-primary)] tracking-tight truncate leading-tight">
-                    iGaming Analyzer
+                  <span className="font-heading text-[14.5px] font-bold text-[var(--color-primary)] tracking-tight truncate leading-tight">
+                    Theseus Workshop
                   </span>
-                  <span className="text-[10px] uppercase font-semibold text-[var(--color-muted)] tracking-wider truncate leading-none mt-0.5">
-                    Vendor Decision Hub
+                  <span
+                    className="text-[10px] font-medium text-[var(--color-muted)] truncate leading-none mt-0.5"
+                    title="iGaming Marketing Vendor Performance & Decision Analyzer"
+                  >
+                    iGaming Marketing Vendor Performance &amp; Decision Analyzer
                   </span>
                 </div>
               )}

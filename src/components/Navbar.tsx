@@ -71,15 +71,15 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header className="sticky top-0 z-40 bg-[var(--nav-bg)] border-b border-[var(--nav-border)] h-[56px] px-6 flex items-center justify-between shadow-xs">
       {/* Brand identity */}
       <div className="flex items-center space-x-3">
-        <div className="w-8 h-8 rounded-lg bg-[var(--color-primary)] flex items-center justify-center text-white font-bold text-sm shadow-xs">
-          iG
+        <div className="w-8 h-8 rounded-lg bg-[var(--color-primary)] flex items-center justify-center text-white font-bold text-xs shadow-xs tracking-wider">
+          TW
         </div>
         <div className="flex flex-col">
           <span className="font-heading text-[15px] font-bold text-[var(--color-primary)] tracking-tight leading-tight">
-            iGaming Vendor Performance & Decision Analyzer
+            Theseus Workshop
           </span>
-          <span className="text-[10px] uppercase font-semibold text-[var(--color-muted)] tracking-wider leading-none">
-            Master Cohort &amp; Gating System
+          <span className="text-[10px] uppercase font-semibold text-[var(--color-muted)] tracking-wider leading-none mt-0.5">
+            iGaming Marketing Vendor Performance &amp; Decision Analyzer
           </span>
         </div>
       </div>

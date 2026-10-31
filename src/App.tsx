@@ -215,7 +215,7 @@ export default function App() {
             </span>
           </div>
           <div className="text-[11px] font-mono text-slate-400">
-            v2.4 // Enterprise Grade Decision Suite
+            Theseus Workshop · iGaming Marketing Vendor Performance &amp; Decision Analyzer
           </div>
         </div>
       </footer>
