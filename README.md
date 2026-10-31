@@ -664,10 +664,12 @@ The result is not a claim that early performance can be known with certainty. It
 
 Theseus Workshop develops lightweight business-analysis and decision-support tools for recurring operational problems.
 
-- **Construction Cost Estimating & Project Control** — Connects estimating assumptions with project-level cost and execution tracking.
-- **Inventory Reconciliation & Shrinkage Analysis** — Helps identify discrepancies across inventory records and locations.
-- **Order-Level Profitability & Financial Reconciliation** — Structures revenue and cost analysis around individual orders.
-- **Business Forecasting & Scenario Planning** — Helps evaluate financial outcomes under alternative operating assumptions.
+- **[Marketing-Audit-Decision-Console](https://github.com/HyVoid/Marketing-Audit-Decision-Console)** — What should we fix first in marketing performance? — Audit marketing channel performance by reconciling ad spend data with actual revenue attribution.
+- **[Marketing-Budget-Allocation-Simulator](https://github.com/HyVoid/Marketing-Budget-Allocation-Simulator)** — Where should the next dollar of marketing spend go? — Allocate marketing budget across channels using portfolio theory and return simulation.
+- **[Paid-Media-Data-Hub](https://github.com/HyVoid/Paid-Media-Data-Hub)** — How do we turn paid media exports into usable performance data? — Transform paid media data exports into standardized decision-ready performance reports.
+- **[tiktok-marketing-roi-calculator](https://github.com/HyVoid/tiktok-marketing-roi-calculator)** — Which monthly agency actions are justified by performance evidence? — Standardize agency performance reporting and benchmark TikTok campaign results against strategic objectives.
+- **[Membership-Engagement-Analytics-Workspace](https://github.com/HyVoid/Membership-Engagement-Analytics-Workspace)** — Which members are engaged slipping or ready for intervention? — Identify member churn risk and engagement trends across lifetime participation history.
+- **[crm-shopify-marketing-attribution-excel](https://github.com/HyVoid/crm-shopify-marketing-attribution-excel)** — Which marketing spend actually produced profitable revenue? — Connect marketing acquisition channels to CRM sales progression and Shopify revenue through unified customer identity attribution.
 
 Explore the related projects on the [Theseus Workshop GitHub profile](https://github.com/HyVoid). Confirm the availability and current scope of each repository before adopting it for operational use.
 
